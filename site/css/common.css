@@ -6,10 +6,10 @@ body{
   font-size: 1em;
   line-height: 1.6em;
   color: #000000;
-  background-color: #fff;
-  width: 90%;
+  background-color: #F4FBFF;
   text-align: center;
   margin: 0 auto;
+  width: 90%;
 }
 
 img{
@@ -31,7 +31,7 @@ a.login{
 }
 
 /*ナビゲーションのスタイル*/
-header nav .nav{
+/*header nav .nav{
   float: right;
 }
 
@@ -47,122 +47,99 @@ header nav ul li{
   margin: 0 10px 0 40px;
   float: left;
 }
+*/
+nav ul.nav{
+  display: flex;
+}
 
-/*メインビジュアルのスタイル*/
+nav ul li.nav_flex{
+  width: 100%;
+  height: 40px;
+  text-align:center;
+  background-color: #ddd;
+  color: #000;
+}
+
+
+/*スライダーの設定*/
 .slider{
-    margin: 100px auto;
-    width: 80%;
+  margin: 0 auto;
+  width: 80%;
 }
 .slider img{
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 /*slick setting*/
 .slick-prev:before,
 .slick-next:before {
-    color: #000;
+  color: #000;
 }
 
+/*メインビジュアルのスタイル*/
 
-main{
+div#wrap{
+  margin:0 auto 0 auto;
+  display: flex;
+}
+
+/*日本地図*/
+div.tizu{
   width: 100%;
-  margin: 0 auto;
-  display: flex;
-  margin-left: 80px;
 }
 
-#japan{
-  border: 1px #000 solid;
+/*検索欄*/
+div.kensaku{
+  width: 100%;
+  background-color: #777;
+
+}
+p.iku{
+  width: 100px;
 }
 
-form{
-  margin: 0 0 0 50px;
-  border: 1px #000 solid;
-}
 
-.ranking{
-  text-align: center;
-  margin: 40px auto 0 auto;
-  margin-left: 80px;
-}
 
-.top{
-  width: 1000px;
-  height: 320px;
-  background-color: #ccc;
-  display: flex;
+/*売れ筋ランキング・おすすめ*/
+h1.h_1{
+  text-align: left;
 }
-
-.second{
-  float: left;
-  width: 500px;
+.multiple {
+  padding: 0;
+}
+.multiple img {
+  width: 100%;
+  max-width: 200px;
   height: 200px;
-  background-color: #aaa;
-  display: flex;
+}
+.multiple div {
+  margin: 0 5px;
+}
+.multiple .slick-next {
+  right: 17px;　z-index: 100;
+}
+.multiple .slick-prev {
+  left: 23px; z-index: 100;
 }
 
-.second_right{
-  width: 500px;
-  height: 200px;
-  background-color: #bbb;
-  display: flex;
+.multiple div a{
+  text-decoration: none;
+  outline: none;
 }
 
-.junni_1{
-  margin-left: 30px;
-  width: 15%;
-  float: left;
+.multiple div a:link{color: #000;}
+.multiple div a:visited{color: #000;}
+.multiple div a:hover{}
+.multiple div a:active{color: #000;}
+
+/* 値段 */
+.multiple_p1{
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #E80034;
 }
 
-.junni{
-  margin-left: 30px;
-  width: 15%;
-  float: left;
+.multiple_p2{
+  margin-top: 10px;
+  font-size: 1.5em;
 }
-
-.one{
-
-}
-
-.photo_1{
-  margin: auto 0;
-  width: 30%;
-}
-
-.photo{
-  margin: auto 0;
-  width: 30%;
-}
-
-.photo_1 img{
-  width: 300px;
-  height: auto;
-}
-
-.photo img{
-  width: 150px;
-  height: auto;
-}
-
-.sonota_1{
-  width: 65%;
-}
-
-.sonota_1 p{
-  height: 33%;
-  margin: auto;
-  font-weight: bold;
-}
-
-.sonota{
-  width: 65%;
-}
-
-.sonota p{
-  height: 33%;
-  margin: auto;
-  font-weight: bold;
-}
-
-
-

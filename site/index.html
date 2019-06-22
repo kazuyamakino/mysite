@@ -22,18 +22,18 @@
   <header>
     <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
 <!-- グローバルナビゲーション -->
-    <nav class="nav">
-      <ul>
-        <li><a href=".html">マイページ</a></li>
-        <li><a href=".html">カート</a></li>
-        <li><a href=".html">購入履歴</a></li>
-        <li><a href=".html">お気に入り</a></li>
+    <nav>
+      <ul class="nav">
+        <li class="nav_flex"><a href=".html">マイページ</a></li>
+        <li class="nav_flex"><a href=".html">カート</a></li>
+        <li class="nav_flex"><a href=".html">購入履歴</a></li>
+        <li class="nav_flex"><a href=".html">お気に入り</a></li>
       </ul>
     </nav>
 
   </header>
 <!-- メインビジュアル -->
-  <div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -48,7 +48,7 @@
           <li><a href="#"><img src="images/08.jpg" alt="image08"></a></li>
       </ul>
 
-        <script type="text/javascript">
+  <script type="text/javascript">
     $('.slider').slick({
         centerMode: true,
         centerPadding: '100px',
@@ -57,22 +57,18 @@
         autoplay:true,
     });
   </script>
-  </div>
 
 <!-- メインビジュアル -->
   <main>
-    <figure id="japan">
-      <img usemap="#map_s" src="images/japan.jpg" alt="日本地図">
-      <map name="map_s">
-        <area shape="poly" coords="" href=".html">
-      </map>
-    </figure>
-
-    <form class="kensaku">
+  <div id="wrap">
+    <div class="tizu">
+      <img src="images/" alt="日本地図">
+    </div>
+    <div class="kensaku">
+    <form>
       <p>キーワード
-        <input type="text" name="word">
+        <input class="ku" type="text" name="word">
       </p>
-
       <p>価格
         <select>
           <option></option>
@@ -91,113 +87,68 @@
         </select>
       </p>
 
-      <input type="subbmit" name="検索">
+      <input type="submit" name="検索" value="検索">
 
     </form>
-
-  </main>
-
-
-  <div class="ranking">
-    <h1>ランキング</h1>
-
-    <div class="top">
-      <div class="junni_1"><p class="one">１位</p></div>
-      <div class="photo_1"><img src="images/fr_01.jpg" alt="１位の写真"></div>
-      <div class="sonota_1">
-        <p>
-          名前<br>
-          パイナップル
-        </p>
-        <p>
-          価格<br>
-          １０００円
-        </p>
-        <p>
-          産地<br>
-          沖縄県
-        </p>
-      </div>
-    </div>
-
-    <div class="second">
-      <div class="junni"><p>２位</p></div>
-      <div class="photo"><img src="images/3.jpg" alt="２位の写真"></div>
-      <div class="sonota">
-        <p>
-          名前<br>
-          パイナップル
-        </p>
-        <p>
-          価格<br>
-          １０００円
-        </p>
-        <p>
-          産地<br>
-          沖縄県
-        </p>
-      </div>
-    </div>
-
-    <div class="second_right">
-      <div class="junni"><p>３位</p></div>
-      <div class="photo"><img src="images/3.jpg" alt="３位の写真"></div>
-      <div class="sonota">
-        <p>
-          名前<br>
-          パイナップル
-        </p>
-        <p>
-          価格<br>
-          １０００円
-        </p>
-        <p>
-          産地<br>
-          沖縄県
-        </p>
-      </div>
-    </div>
-
-    <div class="second">
-      <div class="junni"><p>４位</p></div>
-      <div class="photo"><img src="images/" alt="４位の写真"></div>
-      <div class="sonota">
-        <p>
-          名前<br>
-          パイナップル
-        </p>
-        <p>
-          価格<br>
-          １０００円
-        </p>
-        <p>
-          産地<br>
-          沖縄県
-        </p>
-      </div>
-    </div>
-
-    <div class="second_right">
-      <div class="junni"><p>５位</p></div>
-      <div class="photo"><img src="images/" alt="５位の写真"></div>
-      <div class="sonota">
-        <p>
-          名前<br>
-          パイナップル
-        </p>
-        <p>
-          価格<br>
-          １０００円
-        </p>
-        <p>
-          産地<br>
-          沖縄県
-        </p>
-      </div>
     </div>
 
   </div>
+
+<!-- ランキング -->
+  <h1 class="h_1">売れ筋ランキング</h1>
+    <div class="multiple">
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/4.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/5.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/7.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+    </div>
+  <a href="#">一覧表示</a>
+
+  <hr>
+
+  <h1 class="h_1">おすすめ</h1>
+    <div class="multiple">
+        <div><a href="#"><img src="images/3.jpg" alt=""><p class="multiple_p1">¥15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p class="multiple_p2">15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+    </div>
+
+  <a href="#">一覧表示</a>
+    <script type="text/javascript">
+      $('.multiple').slick({
+        infinite: true, //スライドのループ有効化
+        dots: true, //ドットのナビゲーションを表示
+        slidesToShow: 5, //表示するスライドの数
+        slidesToScroll: 5, //スクロールで切り替わるスライドの数
+        responsive: [{
+          breakpoint: 768, //ブレークポイントが768px
+          settings: {
+            slidesToShow: 3, //表示するスライドの数
+            slidesToScroll: 3, //スクロールで切り替わるスライドの数
+          }
+        }, {
+          breakpoint: 480, //ブレークポイントが480px
+          settings: {
+            slidesToShow: 2, //表示するスライドの数
+            slidesToScroll: 2, //スクロールで切り替わるスライドの数
+          }
+        }]
+      });
+    </script>
+  </main>
+
+
 <!-- フッター -->
+<hr>
   <footer>
     <div class="footer_copyright"><small>copyright &copy; 2019 K. All rights reserved.</small></div>
   </footer>
