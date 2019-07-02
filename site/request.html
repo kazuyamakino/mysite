@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>特産横丁</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/request.css">
+  </head>
+
+  <body>
+<!-- ヘッダー -->
+  <nav class="login">
+    <a href="" class="login">ログイン（新規登録）</a>
+  </nav>
+  <header>
+    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+<!-- グローバルナビゲーション -->
+    <nav>
+      <ul class="nav">
+        <li class="nav_flex"><a href=".html">マイページ</a></li>
+        <li class="nav_flex"><a href=".html">カート</a></li>
+        <li class="nav_flex"><a href=".html">購入履歴</a></li>
+        <li class="nav_flex"><a href=".html">お気に入り</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+<!-- メインビジュアル -->
+<main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/mailaddress.js"></script>
+<script>
+$(document).ready(function(){
+  $(".email").emailautocomplete({ //補完機能をつけたい箇所を指定
+    domains: ["yahoo.co.jp", "gmail.com", "gmail.com", "ezweb.ne.jp", "au.com", "docomo.ne.jp", "i.softbank.jp", "softbank.ne.jp", "excite.co.jp", "googlemail.com", "hotmail.com", "icloud.com", "live.jp", "me.com", "mineo.jp", "nifty.com", "outlook.com", "outlook.jp", "yahoo.ne.jp", "ybb.ne.jp", "ymobile.ne.jp", ] //補完機能に追加したいドメインを記述
+  });
+});
+</script>
+
+  <h1 class="request">リクエスト</h1>
+
+  <p class="main">
+    特産横丁のWebページに新しく掲載してほしい商品をリクエストするフォームです。下記に必要事項を入力の上、送信してください。<br>
+    リクエストのあった商品は生産者・生産会社にお問い合わせ・協議の結果、掲載されない場合がございます。<br>
+    また、リクエストから回答までお時間をいただく場合がございます。あらかじめご了承の上、リクエストをお願いします。<br>
+    リクエストの結果はお客様のメールアドレス宛に送信させていただきます。
+  </p>
+
+  <form action="confirmation.html" method="post">
+
+    <table class="request">
+      <tr>
+        <td rowspan="3" class="left">リクエスト内容</td>
+        <td class="center">商品名</td>
+        <td class="right">
+          <input type="text" name="">
+        </td>
+      </tr>
+      <tr>
+        <td class="center">
+          生産者<br>
+          （生産会社）
+        </td>
+        <td class="right">
+          <input type="text" name="">
+        </td>
+      </tr>
+      <tr>
+        <td class="center">
+          商品画像
+        </td>
+        <td class="right">
+          <input type="file" name="">
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="left">お名前</td>
+        <td colspan="2" class="right name">
+          <p>姓　：<input type="text" name="">
+          名　：<input type="text" name=""></p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="right name">
+          セイ：<input type="text" name="">
+          メイ：<input type="text" name="">
+        </td>
+      </tr>
+      <tr>
+        <td class="left">メールアドレス</td>
+        <td colspan="2" class="right mail"><input type="email" class="email" name="" placeholder="aaaa@email.com"></td>
+      </tr>
+      <tr>
+        <td class="left">その他</td>
+        <td colspan="2" class="right">
+          <textarea class="request"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="button">
+          <input type="submit" name="" value="確認" class="kakunin">
+          <input type="reset" name="" class="reset">
+        </td>
+      </tr>
+    </table>
+
+  </form>
+
+
+
+</main>
+
+
+<!-- フッター -->
+<hr>
+  <footer>
+    <div class="footer_copyright"><small>copyright &copy; 2019 K. All rights reserved.</small></div>
+  </footer>
+
+  </body>
+
+</html>
