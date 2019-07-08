@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/* 共通のスタイル */
+
+body{
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #000000;
+  background-color: #F4FBFF;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+a:link{color: #0000ee;}
+a:visited{color: #551a8b;}
+a:hover{}
+a:active{color: #ff0000;}
+
+nav.login{
+  margin: 15px 0 20px 0;
+}
+
+a.login{
+  margin-left: 800px;
+}
+
+nav ul.nav{
+  display: flex;
+}
+
+nav ul li.nav_flex{
+  width: 100%;
+  height: 40px;
+  text-align:center;
+  background-color: #ddd;
+  color: #000;
+}
+
+/*メインビジュアルのスタイル*/
+
+div.main{
+  margin:0 auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 1000px;
+}
+
+div.main_flex1{
+  margin-top: 100px;
+  width: 150px;
+  color: #000;
+}
+
+ul, li{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#category {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    border: 1px solid #fff;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #666;
+    font-weight: bold;
+    padding-top: 10px;
+    width: 200px;
+}
+#category a {
+    text-decoration: none;
+    color: #666;
+}
+#category a:hover {
+    color: #ffffff;
+}
+#menu {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #CCC;
+}
+.main_menu{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    font-weight: bold;
+    padding-left: 20px;
+    text-indent: 10;
+    display: block;
+    position: relative;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #CCC;
+    width: 180px;
+}
+.main_menu::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 2px #8EDBFF;
+    border-right: solid 2px #8EDBFF;
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -6px;
+}
+#menu .open::before {
+    -ms-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+    margin-top: -3px;
+}
+#menu .main_menu:hover ,#menu .open {
+    background-color: #8EDBFF;
+    color: #FFF;
+}
+#menu .main_menu:hover::before ,#menu .open::before{
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+}
+.sub_menu li a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-indent: 40px;
+    background-color: #fff;
+    display: block;
+    position: relative;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #CCC;
+}
+.sub_menu li a::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border: solid 4px transparent;
+    border-left: solid 6px #8EDBFF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+    margin-left: 25px;
+}
+.sub_menu li a:hover{
+    background-color: #8EDBFF;
+}
+.sub_menu li a:hover::before {
+    border-left: solid 6px #ffffff;
+}
+.third_menu li a{
+    padding-left: 40px;
+    border-top-style: none;
+    padding-bottom: 6px;
+    padding-top: 6px;   
+}
+.third_menu li a::before{
+    margin-left: 65px;
+}
+
+
+div.main_flex2{
+  margin-top: 100px;
+  width: 450px;
+  text-align:center;
+  color: #000;
+}
+
+
+div.main_flex2 img{
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+div.main_flex3{
+  margin-top: 100px;
+  width: 400px;
+  text-align:center;
+  color: #000;
+}
+
+table , td , th{
+  border: 1px solid #000000;
+}
+
+div.syouhinnmei{
+  font-size: 2em;
+  line-height: 40px;
+}
+
+table.shousai{
+  margin-top: 20px;
+
+}
+
+table td{
+  vertical-align: middle;
+}
+
+table td.t_1{
+  width: 100px;
+}
+
+div.main_flex4{
+
+  width: 750px;
+}
+
+.kago{
+  margin-top: 40px;
+  border: 1px solid;
+}
+
+.price{
+  margin: 10px 0 10px 0;
+  font-size: 2em;
+}
+
+/* カートに入れる */
+.p_1{
+    border: 0px;
+    width:204px;
+    height:55px;
+    background: url(../images/cartin.jpg) left top no-repeat;
+}
+ 
+.p_1:hover{
+  cursor: pointer;
+}
+
+.p_2{
+    margin-top: 20px;
+    border: 0px;
+    width:204px;
+    height:55px;
+    background: url(../images/imasugu.jpg) left top no-repeat;
+}
+ 
+.p_2:hover{
+  cursor: pointer;
+}
