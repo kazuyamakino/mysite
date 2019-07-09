@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>特産横丁</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/change.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+<!-- ヘッダー -->
+  <nav class="login">
+    <a href="login.html" class="login">ようこそ○○さん！</a>
+  </nav>
+  <header>
+    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+  </header>
+
+<!-- グローバルナビゲーション -->
+    <nav>
+      <ul class="nav">
+        <li class="nav_flex"><a href="mypage.html">マイページ</a></li>
+        <li class="nav_flex"><a href="cart.html">カート</a></li>
+        <li class="nav_flex"><a href="mypage.html#tobe2">購入履歴</a></li>
+        <li class="nav_flex"><a href="mypage.html">お気に入り</a></li>
+      </ul>
+    </nav>
+
+
+<!-- メインビジュアル -->
+  <main>
+
+    <h1>会員情報変更</h1>
+
+    <ul class="menu">
+      <li>
+        <a href="#">ID/パスワード</a>
+          <ul>
+            <li>
+              <a href="#">a1</a>
+            </li>
+            <li>
+              <a href="#">a1</a>
+            </li>
+          </ul>
+      </li>
+    </ul>
+
+    <ul class="menu">
+      <li>
+        <a href="#">基本情報</a>
+          <ul>
+            <li>
+              <a href="#">b1</a>
+            </li>
+            <li>
+              <a href="#">b1</a>
+            </li>
+          </ul>
+      </li>
+    </ul>
+
+    <ul class="menu">
+      <li>
+        <a href="#">カード情報</a>
+        <ul>
+          <li>
+            <a href="#">c1</a>
+          </li>
+          <li>
+            <a href="#">c1</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+
+
+<script type="text/javascript">
+  $(function() {
+var nav = $('.menu');
+$('li', nav)
+.mouseover(function(e) {
+$('ul', this).stop().slideDown('fast');
+})
+.mouseout(function(e) {
+$('ul', this).stop().slideUp('fast');
+});
+});
+</script>
+  </main>
+
+<!-- フッター -->
+<hr>
+  <footer>
+    <div class="footer_copyright"><small>copyright &copy; 2019 K. All rights reserved.</small></div>
+  </footer>
+
+  </body>
+
+</html>
