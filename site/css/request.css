@@ -117,6 +117,17 @@ textarea.request{
   padding: 5px 0;
 }
 
+.button2{
+  width: 100px;
+  padding: 5px 0;
+  display: flex;
+  margin:0 auto;
+}
+
+.button2 input{
+  margin: 0 auto;
+}
+
 .toi{
   height: 5em;
 }
