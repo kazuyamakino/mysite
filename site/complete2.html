@@ -16,7 +16,7 @@
   <body>
 <!-- ヘッダー -->
   <nav class="login">
-    <a href="" class="login">ログイン（新規登録）</a>
+    <a href="login.html" class="login">ログイン（新規登録）</a>
   </nav>
   <header>
     <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
@@ -41,6 +41,21 @@
     お問い合わせ内容の送信が完了しました。
   </p>
 
+  <p id="PassageArea">5秒後にTOPページに移動します。</p>
+
+  <script type="text/javascript">
+  <!--
+  count = 5; //カウントの初期値
+  timerID = setInterval('countdown()',1000); 
+
+  function countdown() {
+    count--;
+    var msg = count + "秒後にTOPページに移動します。";   // 表示文作成
+    document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
+  }
+  -->
+  </script>
+
 
 </main>
 
@@ -60,7 +75,7 @@ function autoLink()
 {
 location.href="index.html";
 }
-setTimeout("autoLink()",10000); 
+setTimeout("autoLink()",5000); 
 // -->
 </SCRIPT>
 

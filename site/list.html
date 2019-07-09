@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>特産横丁</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/list.css">
+<style type="text/css">
+  /* タブっぽく並べて */
+  #tabs ul {overflow:hidden; height:2em; list-style:none; border-bottom:1px solid #cccccc;}
+  #tabs li {float:left; display:inline; margin-left:10px; padding:5px; border:1px solid #ccc; border-bottom:none; border-radius:10px 10px 0 0;}
+  /* 最初はパネルは非表示 */
+  #tabs .panel {display:none;}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('#tabs a[href^="#panel"]').click(function(){
+    $("#tabs .panel").hide();
+    $(this.hash).fadeIn();
+    return false;
+  });
+  $('#tabs a[href^="#panel"]:eq(0)').trigger('click');
+})
+</script>
+  </head>
+
+  <body>
+<!-- ヘッダー -->
+  <nav class="login">
+    <a href="login.html" class="login">ログイン（新規登録）</a>
+  </nav>
+  <header>
+    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+<!-- グローバルナビゲーション -->
+    <nav>
+      <ul class="nav">
+        <li class="nav_flex"><a href=".html">マイページ</a></li>
+        <li class="nav_flex"><a href=".html">カート</a></li>
+        <li class="nav_flex"><a href=".html">購入履歴</a></li>
+        <li class="nav_flex"><a href=".html">お気に入り</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+<!-- メインビジュアル -->
+<main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/mailaddress.js"></script>
+<script>
+$(document).ready(function(){
+  $(".email").emailautocomplete({ //補完機能をつけたい箇所を指定
+    domains: ["yahoo.co.jp", "gmail.com", "gmail.com", "ezweb.ne.jp", "au.com", "docomo.ne.jp", "i.softbank.jp", "softbank.ne.jp", "excite.co.jp", "googlemail.com", "hotmail.com", "icloud.com", "live.jp", "me.com", "mineo.jp", "nifty.com", "outlook.com", "outlook.jp", "yahoo.ne.jp", "ybb.ne.jp", "ymobile.ne.jp", ] //補完機能に追加したいドメインを記述
+  });
+});
+</script>
+
+<h1>商品一覧</h1>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#panel1">北海道地方</a></li>
+    <li><a href="#panel2">東北地方</a></li>
+    <li><a href="#panel3">関東地方</a></li>
+    <li><a href="#panel4">北陸・甲信越地方</a></li>
+    <li><a href="#panel5">東海地方</a></li>
+    <li><a href="#panel6">近畿地方</a></li>
+    <li><a href="#panel7">中国地方</a></li>
+    <li><a href="#panel8">四国地方</a></li>
+    <li><a href="#panel9">九州地方</a></li>
+    <li><a href="#panel10">沖縄地方</a></li>
+  </ul>
+
+  <div id="panel1" class="panel">
+    <h2 class="">北海道地方</h2>
+    <h3 class="">北海道</h3>
+  </div>
+
+  <div id="panel2" class="panel">
+    <h2 class="">東北地方</h2>
+    <h3 class="">青森県</h3>
+    <h3 class="">岩手県</h3>
+    <h3 class="">宮城県</h3>
+    <h3 class="">秋田県</h3>
+    <h3 class="">山形県</h3>
+    <h3 class="">福島県</h3>
+  </div>
+
+  <div id="panel3" class="panel">
+    <h2 class="">関東地方</h2>
+    <h3 class="">茨城県</h3>
+    <h3 class="">栃木県</h3>
+    <h3 class="">群馬県</h3>
+    <h3 class="">埼玉県</h3>
+    <h3 class="">千葉県</h3>
+    <h3 class="">東京都</h3>
+    <h3 class="">神奈川県</h3>
+  </div>
+
+  <div id="panel4" class="panel">
+    <h2 class="">北陸・甲信越地方</h2>
+    <h3 class="">新潟県</h3>
+    <h3 class="">富山県</h3>
+    <h3 class="">石川県</h3>
+    <h3 class="">福井県</h3>
+    <h3 class="">山梨県</h3>
+    <h3 class="">長野県</h3>
+  </div>
+
+  <div id="panel5" class="panel">
+    <h2 class="">東海地方</h2>
+    <h3 class="">岐阜県</h3>
+    <h3 class="">静岡県</h3>
+    <h3 class="">愛知県</h3>
+    <h3 class="">三重県</h3>
+  </div>
+
+  <div id="panel6" class="panel">
+    <h2 class="">近畿地方</h2>
+    <h3 class="">滋賀県</h3>
+    <h3 class="">京都府</h3>
+    <h3 class="">大阪府</h3>
+    <h3 class="">兵庫県</h3>
+    <h3 class="">奈良県</h3>
+    <h3 class="">和歌山県</h3>
+  </div>
+
+  <div id="panel7" class="panel">
+    <h2 class="">中国地方</h2>
+    <h3 class="">鳥取県</h3>
+    <h3 class="">島根県</h3>
+    <h3 class="">岡山県</h3>
+    <h3 class="">広島県</h3>
+    <h3 class="">山口県</h3>
+  </div>
+
+  <div id="panel8" class="panel">
+    <h2 class="">四国地方</h2>
+    <h3 class="">徳島県</h3>
+    <h3 class="">香川県</h3>
+    <h3 class="">愛媛県</h3>
+    <h3 class="">高知県</h3>
+  </div>
+
+  <div id="panel9" class="panel">
+    <h2 class="">九州地方</h2>
+    <h3 class="">福岡県</h3>
+    <h3 class="">佐賀県</h3>
+    <h3 class="">長崎県</h3>
+    <h3 class="">熊本県</h3>
+    <h3 class="">大分県</h3>
+    <h3 class="">宮崎県</h3>
+    <h3 class="">鹿児島県</h3>
+  </div>
+
+  <div id="panel10" class="panel">
+    <h2 class="">沖縄地方</h2>
+    <h3 class="">沖縄県</h3>
+  </div>
+
+
+</div>
+</main>
+
+
+<!-- フッター -->
+<hr>
+  <footer>
+    <div class="footer_copyright"><small>copyright &copy; 2019 K. All rights reserved.</small></div>
+  </footer>
+
+  </body>
+
+</html>
