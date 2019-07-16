@@ -70,9 +70,8 @@
   <main>
   <div id="wrap">
     <div class="tizu">
-
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery.japan-map.min.js"></script>
+      <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/jquery.japan-map.min.js"></script>
       <div id="map-container"></div>
         <script type="text/javascript">
         $(function(){
@@ -98,7 +97,7 @@
                     drawsBoxLine : false,
                     movesIslands : true,
                     showsAreaName : true,
-                    width: 800,
+                    width: 600,
                     font : "MS Mincho",
                     fontSize : 12,
                     fontColor : "areaColor",
@@ -113,29 +112,36 @@
 </div>
     <div class="kensaku">
     <form>
-      <p>キーワード
-        <input class="ku" type="text" name="word">
-      </p>
-      <p>価格
+      <div class="k_p">
+      <p class="k_p1">ジャンルで絞り込む</p>
         <select>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
+          <option disabled="" selected="">ジャンルで絞り込む</option>
+          <option>精肉・加工</option>
+          <option>魚介類</option>
+          <option>米・穀物</option>
+          <option>麺類</option>
         </select>
-      </p>
+      </div>
+      <div class="k_p">
+        <p class="k_p3">キーワード</p>
+        <input type="text" name="">
+      </div>
 
-      <p>キーワード
-        <select>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
-      </p>
+      <div class="k_p">
+        <input type="radio" name="hyouka" value="good">すべて
+        <input type="radio" name="hyouka" value="good">いずれか のキーワードを含む
+      </div>
+      <div class="k_p2">
+        <input type="checkbox" name="riyu" value="1">商品名・商品番号で探す
+      </div>
+      <div class="k_p">
+        <p>価格帯</p>
+          <input type="text" name=""><p>～</p><input type="text" name=""><p>円</p>
+      </div>
 
-      <input type="submit" name="検索" value="検索">
-
+      <div class="k_p">
+      <input type="submit" value="この条件で検索" class="button">
+      </div>
     </form>
     </div>
 
