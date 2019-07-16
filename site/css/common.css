@@ -185,7 +185,7 @@ p.iku{
   margin-top: 10px;
 }
 
-.button {
+.button3 {
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
   font-size     : 14pt;        /* 文字サイズ */
@@ -198,7 +198,7 @@ p.iku{
   transition    : .3s;         /* なめらか変化 */
   border        : 2px solid #999999;    /* 枠の指定 */
 }
-.button:hover {
+.button3:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #999999;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
