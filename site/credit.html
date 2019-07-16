@@ -356,7 +356,7 @@
         </table>
       </div>
       <div class="kaikei"><p><font>商品合計：</font><font class="red">&yen;15,980</font></p></div>
-      <input class="submit" type="button" value="購入する" onClick="location.href='credit_submit.html'">
+      <input class="submit" type="button" value="購入する" onClick="disp()">
       </form>
     </td>
   </tr>
@@ -439,6 +439,18 @@
         focusOnSelect:true,
         autoplay:true,
       });
+
+      function disp(){
+  // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+  if(window.confirm('入力内容に間違いはありませんか？')){
+    location.href = "credit_submit.html"; // example_confirm.html へジャンプ
+  }
+  // 「OK」時の処理終了
+  // 「キャンセル」時の処理開始
+  else{}
+  // 「キャンセル」時の処理終了
+
+}
     </script>
   </body>
 
