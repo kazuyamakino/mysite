@@ -159,14 +159,50 @@ div.tizu{
 /*検索欄*/
 div.kensaku{
   width: 100%;
-  background-color: #777;
+  background-color: #fff;
 
 }
 p.iku{
   width: 100px;
 }
 
+.k_p{
+  display: inline-flex;
+  margin-top: 40px;
+}
 
+.k_p1{
+  margin-right: 40px;
+}
+
+.k_p3{
+  margin-right: 10px;
+  width: 200px;
+}
+
+.k_p2{
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 14pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 48px;   /* 余白       */
+  background    : #999999;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #999999;    /* 枠の指定 */
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #999999;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
 
 /*売れ筋ランキング・おすすめ*/
 h1.h_1{
