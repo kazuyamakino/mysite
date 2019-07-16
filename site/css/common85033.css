@@ -48,6 +48,17 @@ header nav ul li{
   float: left;
 }
 */
+
+/*ヘッダー*/
+nav.login-name{
+  margin: 15px 0 20px 0;
+}
+
+a.login-name{
+  text-align: right;
+  margin-left: 800px;
+}
+
 nav ul.nav{
   display: flex;
 }
