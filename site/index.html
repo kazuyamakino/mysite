@@ -94,14 +94,14 @@
                     areas  : areas,
                     selection : "area",
                     borderLineWidth: 0.25,
-                    drawsBoxLine : false,
+                    drawsBoxLine : true,
                     movesIslands : true,
                     showsAreaName : true,
                     width: 600,
                     font : "MS Mincho",
                     fontSize : 12,
-                    fontColor : "areaColor",
-                    fontShadowColor : "black",
+                    fontColor : "black",
+                    fontShadowColor : "white",
                     onSelect:function(data){
                     window.location.href = "list.html" + "#panel" + data.code;
                     },
@@ -128,11 +128,11 @@
       </div>
 
       <div class="k_p">
-        <input type="radio" name="hyouka" value="good">すべて
-        <input type="radio" name="hyouka" value="good">いずれか のキーワードを含む
+        <label><input type="radio" name="hyouka" value="good">すべて</label>
+        <label><input type="radio" name="hyouka" value="good">いずれか のキーワードを含む</label>
       </div>
       <div class="k_p2">
-        <input type="checkbox" name="riyu" value="1">商品名・商品番号で探す
+        <label><input type="checkbox" name="riyu" value="1">商品名・商品番号で探す</label>
       </div>
       <div class="k_p">
         <p>価格帯</p>
