@@ -9,7 +9,7 @@ body{
   background-color: #F4FBFF;
   text-align: center;
   margin: 0 auto;
-  width: 1000px;
+  width: 90%;
 }
 
 img{
@@ -39,6 +39,16 @@ nav ul li.nav_flex{
   text-align:center;
   background-color: #ddd;
   color: #000;
+}
+
+div#tabs{
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.panel{
+  width: 90%;
+  margin: 0 auto;
 }
 
 h1.request{
