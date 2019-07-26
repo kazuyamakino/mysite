@@ -16,7 +16,7 @@ img{
   vertical-align: bottom;
 }
 
-a:link{color: #0000ee;}
+a:link{color: #0000ee; text-decoration: none;}
 a:visited{color: #551a8b;}
 a:hover{}
 a:active{color: #ff0000;}
