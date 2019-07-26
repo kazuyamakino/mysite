@@ -44,17 +44,17 @@ nav ul li.nav_flex{
 }
 
 /* マウスオーバー時のサブメニュー */
-.menu {
+.changemenu {
   overflow: hidden;
   width: 750px;
   margin: 0 auto;
   padding: 0;
   display: flex;
 }
-.menu li {
+.changemenu li {
   list-style: none;
 }
-.menu li a {
+.changemenu li a {
   display: block;
   width: 150px;
   height: 40px;
@@ -67,20 +67,63 @@ nav ul li.nav_flex{
   border-right: 1px solid #eee;
   box-sizing: border-box;
 }
-.menu > li:hover > a {/*layer-1*/
+.changemenu > li:hover > a {/*layer-1*/
   color: orange;
   background: #afc6e2;
 }
-.menu li ul {
+.changemenu li ul {
   width: 150px;
   display: none;
   margin-left: -40px;
   position: absolute;
 }
-.menu > li li:hover > a {/*layer-2*/
+.changemenu > li li:hover > a {/*layer-2*/
   color: olive;
   background: #afc6e2;
 }
-.menu li ul li a {
+.changemenu li ul li a {
   border-top: 1px solid #eee;
+}
+
+.a{
+  margin: 0 50px 0 50px;
+}
+
+/* マイページに戻る */
+.backmypage{
+  margin-top: 250px;
+}
+
+/* 登録内容確認ページ */
+.change{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+table{
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px #000 solid;
+}
+
+table tr,td{
+  border: 1px #000 solid;
+}
+
+.chan{
+  width: 150px;
+}
+
+input.button{
+  text-align: center;
+  width: 70px;
+  height: 40px;
+  margin: 5px;
+}
+
+/* 変更完了ページ */
+p{
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
