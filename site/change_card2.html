@@ -23,19 +23,24 @@
 <!-- メインビジュアル -->
     <main>
 
-    <h1 class="change">変更内容の確認</h1>
+    <h1 class="change">カード情報の変更</h1>
 
-    <form method="post" action="change_idpas4.html">
+    <form method="post" action="change_card3.html">
 
-      <table>
+        <table>
         <tr>
-          <td class="chan">ユーザーID</td>
-          <td></td>
+          <td class="chan">カード番号</td>
+          <td><input type="number" name="number"></td>
         </tr>
 
         <tr>
-          <td class="chan">パスワード</td>
-          <td></td>
+          <td class="chan">名義人</td>
+          <td><input type="text" name="meigi"></td>
+        </tr>
+
+        <tr>
+          <td class="chan">有効期限</td>
+          <td><input type="number" name="date"></td>
         </tr>
 
       </table>
@@ -44,7 +49,7 @@
 
       <div>
         <input type="submit" value="次へ" class="button">
-        <input type="button" value="修正" class="button" onclick="history.back()">
+        <input type="reset" value="クリア" class="button">
       </div>
 
     </form>

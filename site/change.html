@@ -9,6 +9,7 @@
     <title>特産横丁</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/change.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
@@ -16,30 +17,36 @@
   <body>
 <!-- ヘッダー -->
   <nav class="login">
-    <a href="login.html" class="login">ようこそ○○さん！</a>
+    <a href="login.html" class="login">ログイン（新規登録）</a>
   </nav>
   <header>
     <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
-  </header>
-
 <!-- グローバルナビゲーション -->
-    <nav>
-      <ul class="nav">
-        <li class="nav_flex"><a href="mypage.html">マイページ</a></li>
-        <li class="nav_flex"><a href="cart.html">カート</a></li>
-        <li class="nav_flex"><a href="mypage.html#tobe2">購入履歴</a></li>
-        <li class="nav_flex"><a href="mypage.html">お気に入り</a></li>
-      </ul>
-    </nav>
-
-
+    <ul class="menu">
+      <li class="menu__single">
+        <a href="index.html" class="init-bottom">トップページへ</a>
+      </li>
+      <li class="menu__single">
+        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
+      </li>
+      <li class="menu__single">
+        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
+      </li>
+      <li class="menu__single">
+        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
+      </li>
+      <li class="menu__single">
+        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+      </li>
+    </ul>
+  </header>
 <!-- メインビジュアル -->
   <main>
 
     <h1>会員情報変更</h1>
 
 <!-- サブメニュー -->
-    <ul class="menu">
+    <ul class="changemenu">
       <li class="a">
         <a href="change_idpas1.html">ID/パスワード</a>
           <ul>
@@ -52,36 +59,36 @@
           </ul>
       </li>
       <li class="a">
-        <a href="#">基本情報</a>
+        <a href="change_basicinfo1.html">基本情報</a>
           <ul>
             <li>
-              <a href="#">氏名</a>
+              <a href="change_basicinfo1.html">氏名</a>
             </li>
             <li>
-              <a href="#">生年月日</a>
+              <a href="change_basicinfo1.html">生年月日</a>
             </li>
             <li>
-              <a href="#">Eメールアドレス</a>
+              <a href="change_basicinfo1.html">Eメールアドレス</a>
             </li>
             <li>
-              <a href="#">電話番号</a>
+              <a href="change_basicinfo1.html">電話番号</a>
             </li>
             <li>
-              <a href="#">住所</a>
+              <a href="change_basicinfo1.html">住所</a>
             </li>
           </ul>
       </li>
       <li class="a">
-        <a href="#">カード情報</a>
+        <a href="change_card1.html">カード情報</a>
         <ul>
           <li>
-            <a href="#">カード番号</a>
+            <a href="change_card1.html">カード番号</a>
           </li>
           <li>
-            <a href="#">名義人</a>
+            <a href="change_card1.html">名義人</a>
           </li>
           <li>
-            <a href="#">有効期限</a>
+            <a href="change_card1.html">有効期限</a>
           </li>
         </ul>
       </li>
@@ -90,7 +97,7 @@
 <!-- サブメニューscript -->
     <script type="text/javascript">
       $(function() {
-    var nav = $('.menu');
+    var nav = $('.changemenu');
     $('li', nav)
     .mouseover(function(e) {
     $('ul', this).stop().slideDown('fast');
