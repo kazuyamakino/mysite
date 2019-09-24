@@ -30,35 +30,27 @@ a.login{
   margin-left: 800px;
 }
 
-/*ナビゲーションのスタイル*/
-/*header nav .nav{
-  float: right;
-}
-
-header nav ul{
-  width: 80%;
-  margin: 0 auto;
-  padding: 40px 0 0 0;
-  overflow: hidden;
-}
-
-header nav ul li{
-  width: 180px;
-  margin: 0 10px 0 40px;
-  float: left;
-}
-*/
 
 /*ヘッダー*/
 nav.login-name{
   margin: 15px 0 20px 0;
 }
 
-a.login-name{
-  text-align: right;
-  margin-left: 800px;
+div.login-name{
+  margin-left: 900px;
+  width: 200px;
 }
 
+div.login-name div{
+  background-color: #516ab6;
+}
+
+div.login-name div a:link{
+  color: #fff;
+}
+div.login-name div a:visited{
+  color: #fff;
+}
 nav ul.nav{
   display: flex;
 }

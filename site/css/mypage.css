@@ -25,10 +25,22 @@ nav.login-name{
   margin: 15px 0 20px 0;
 }
 
-a.login-name{
-  text-align: right;
-  margin-left: 800px;
+div.login-name{
+  margin-left: 900px;
+  width: 200px;
 }
+
+div.login-name div{
+  background-color: #516ab6;
+}
+
+div.login-name div a:link{
+  color: #fff;
+}
+div.login-name div a:visited{
+  color: #fff;
+}
+
 
 
 
@@ -80,37 +92,12 @@ h1{
   color: #000;
 }
 
-/*メインビジュアルのスタイル*/
-
-div#wrap{
-  margin:0 auto 0 auto;
-  display: flex;
-}
-
-/*日本地図*/
-div.tizu{
-  width: 100%;
-}
-
-/*検索欄*/
-div.kensaku{
-  width: 100%;
-  background-color: #777;
-
-}
-p.iku{
-  width: 100px;
-}
 
 h1.midasi{
   margin-top: 80px;
   border-radius: 5px;
 }
 
-/*売れ筋ランキング・おすすめ*/
-h1.h_1{
-  text-align: left;
-}
 .multiple {
   padding: 0;
   margin-top: 40px;
@@ -135,10 +122,6 @@ h1.h_1{
   outline: none;
 }
 
-.multiple div a:link{color: #000;}
-.multiple div a:visited{color: #000;}
-.multiple div a:hover{}
-.multiple div a:active{color: #000;}
 
 /* 値段 */
 .multiple_p1{
