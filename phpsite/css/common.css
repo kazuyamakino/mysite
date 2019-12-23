@@ -43,6 +43,7 @@ a.login{
 .menu > li {
     float: left;
     width: 20%; /* グローバルナビ5つの場合 */
+    min-width: 9em;
     height: 45px;
     line-height: 45px;
     background: #516ab6;/*背景色*/
@@ -153,12 +154,12 @@ div#wrap{
 
 /*日本地図*/
 div.tizu{
-  width: 100%;
+  width: 605px;
 }
 
 /*検索欄*/
 div.kensaku{
-  width: 100%;
+  width: 605px;
   background-color: #fff;
 
 }
