@@ -38,7 +38,9 @@ if (isset($_POST['submit'])) {
             $paskakunin = $_POST['paskakunin'];
             $name = $_POST['lastname'].$_POST['firstname'];
             $name_kana = $_POST['lastkana'].$_POST['firstkana'];
-            $birthday = $_POST['year'].$_POST['month'].$_POST['day'];
+            $year = $_POST['year'];
+            $month = $_POST['month'];
+            $day = $_POST['day'];
             $mail = $_POST['mail'];
             $phone = $_POST['phone'];
             $zip11 = $_POST['zip11'];
@@ -163,17 +165,11 @@ if (isset($_POST['submit'])) {
 
         <tr>
           <td class="regist">パスワード</td>
-          <td></td>
+          <td>
+          <?php echo $pas; ?>
+          </td>
         </tr>
 
-        <tr>
-          <td class="regist">
-            パスワード
-            <br>
-            (確認用)
-          </td>
-          <td></td>
-        </tr>
       </table>
 
       <br>
@@ -182,39 +178,41 @@ if (isset($_POST['submit'])) {
       <table>
         <tr>
           <td class="regist">氏名</td>
-          <td>姓　　　　　名　</td>
+          <td><?php echo $name; ?></td>
         </tr>
 
         <tr>
           <td class="regist">
             フリガナ
           </td>
-          <td>セイ　　　　　メイ</td>
+          <td><?php echo $name_kana; ?></td>
         </tr>
 
         <tr>
           <td class="regist">生年月日</td>
           <td>
-            西暦　　　　年
-            　　月
-            　　日生
+            西暦<?php echo $year; ?>年
+            <?php echo $month; ?>月
+            <?php echo $day; ?>日生
          </td>
         </tr>
 
         <tr>
           <td>Eメールアドレス</td>
-          <td></td>
+          <td><?php echo $mail; ?></td>
         </tr>
 
         <tr>
           <td class="regist">電話番号</td>
-          <td></td>
+          <td><?php echo $phone; ?></td>
         </tr>
 
         <tr>
           <td class="regist">住所</td>
           <td>
-            〒
+            〒<?php echo $zip11; ?>
+            <?php echo $addr11; ?>
+            <?php echo $address; ?>
 
 
           </td>
@@ -227,17 +225,17 @@ if (isset($_POST['submit'])) {
         <table>
         <tr>
           <td class="regist">カード番号</td>
-          <td></td>
+          <td><?php echo $number; ?></td>
         </tr>
 
         <tr>
           <td class="regist">名義人</td>
-          <td></td>
+          <td><?php echo $meigi; ?></td>
         </tr>
 
         <tr>
           <td class="regist">有効期限</td>
-          <td></td>
+          <td><?php echo $date ?></td>
         </tr>
 
       </table>
