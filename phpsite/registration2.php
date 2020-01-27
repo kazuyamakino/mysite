@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
             $pass = password_hash($pas, PASSWORD_DEFAULT);
             $pass_k = password_hash($paskakunin, PASSWORD_DEFAULT);
 
-            if ($pass == pass_k) {
+            if ($pass == $pass_k) {
 
                 $stmt1 = $pdo->prepare("INSERT INTO user_details_tbl(user_id, name, name_read, birthday, mail_address, phone_number, postal_code, street_address)
 				  VALUES (:user_id, :name, :name_read, :birthday, :mail_address, :phone_number, :postal_code, :street_address)");
