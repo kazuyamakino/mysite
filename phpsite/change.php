@@ -17,26 +17,26 @@
   <body>
 <!-- ヘッダー -->
   <nav class="login">
-    <a href="login.html" class="login">ログイン（新規登録）</a>
+    <a href="login.php" class="login">ログイン（新規登録）</a>
   </nav>
   <header>
-    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+    <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
 <!-- グローバルナビゲーション -->
     <ul class="menu">
       <li class="menu__single">
-        <a href="index.html" class="init-bottom">トップページへ</a>
+        <a href="index.php" class="init-bottom">トップページへ</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
+        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
+        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+        <a href="request.php" class="init-bottom">お問い合わせをする</a>
       </li>
     </ul>
   </header>
@@ -48,47 +48,47 @@
 <!-- サブメニュー -->
     <ul class="changemenu">
       <li class="a">
-        <a href="change_idpas1.html">ID/パスワード</a>
+        <a href="change_idpas1.php">ID/パスワード</a>
           <ul>
             <li>
-              <a href="change_idpas1.html">ユーザーID</a>
+              <a href="change_idpas1.php">ユーザーID</a>
             </li>
             <li>
-              <a href="change_idpas1.html">パスワード</a>
+              <a href="change_idpas1.php">パスワード</a>
             </li>
           </ul>
       </li>
       <li class="a">
-        <a href="change_basicinfo1.html">基本情報</a>
+        <a href="change_basicinfo1.php">基本情報</a>
           <ul>
             <li>
-              <a href="change_basicinfo1.html">氏名</a>
+              <a href="change_basicinfo1.php">氏名</a>
             </li>
             <li>
-              <a href="change_basicinfo1.html">生年月日</a>
+              <a href="change_basicinfo1.php">生年月日</a>
             </li>
             <li>
-              <a href="change_basicinfo1.html">Eメールアドレス</a>
+              <a href="change_basicinfo1.php">Eメールアドレス</a>
             </li>
             <li>
-              <a href="change_basicinfo1.html">電話番号</a>
+              <a href="change_basicinfo1.php">電話番号</a>
             </li>
             <li>
-              <a href="change_basicinfo1.html">住所</a>
+              <a href="change_basicinfo1.php">住所</a>
             </li>
           </ul>
       </li>
       <li class="a">
-        <a href="change_card1.html">カード情報</a>
+        <a href="change_card1.php">カード情報</a>
         <ul>
           <li>
-            <a href="change_card1.html">カード番号</a>
+            <a href="change_card1.php">カード番号</a>
           </li>
           <li>
-            <a href="change_card1.html">名義人</a>
+            <a href="change_card1.php">名義人</a>
           </li>
           <li>
-            <a href="change_card1.html">有効期限</a>
+            <a href="change_card1.php">有効期限</a>
           </li>
         </ul>
       </li>
@@ -108,7 +108,7 @@
     });
     </script>
 
-    <div class="backmypage"><a href="mypage.html">マイページに戻る</a></div>
+    <div class="backmypage"><a href="mypage.php">マイページに戻る</a></div>
 
   </main>
 

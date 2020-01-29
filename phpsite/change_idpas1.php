@@ -16,7 +16,7 @@
   <body>
 
     <header>
-      <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+      <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
     </header>
 
 
@@ -25,7 +25,7 @@
 
     <h1 class="change">ID/パスワードの確認</h1>
 
-    <form method="post" action="change_idpas2.html">
+    <form method="post" action="change_idpas2.php">
 
       <table>
         <tr>
@@ -52,7 +52,7 @@
 
     <br>
 
-    <a href="change.html">会員情報変更トップに戻る</a>
+    <a href="change.php">会員情報変更トップに戻る</a>
 
     </main>
 

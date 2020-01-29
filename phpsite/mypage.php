@@ -17,36 +17,36 @@
   <body>
       <div class="login-name">
         <div>
-          <a href="change.html">
+          <a href="change.php">
             〇〇〇〇さん<br>
             会員情報
           </a>
         </div>
         </label>
-        <a href="index.html">ログアウト</a>
+        <a href="index.php">ログアウト</a>
       </div>
     <header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-      <a href="index.html"><img class="rogo" src="images/rogo.jpg" alt="ろご"></a>
+      <a href="index.php"><img class="rogo" src="images/rogo.jpg" alt="ろご"></a>
 
 <!-- グローバルナビゲーション -->
     <ul class="menu">
       <li class="menu__single">
-        <a href="index.html" class="init-bottom">トップページへ</a>
+        <a href="index.php" class="init-bottom">トップページへ</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
+        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
+        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+        <a href="request.php" class="init-bottom">お問い合わせをする</a>
       </li>
     </ul>
 
@@ -107,7 +107,7 @@
     <br>
         <ul class="menu">
       <li class="menu__single">
-        <a href="index.html" class="init-bottom">トップページ</a>
+        <a href="index.php" class="init-bottom">トップページ</a>
       </li>
       <li class="menu__single">
         <a href="#tobe" class="init-bottom">お気に入り</a>
@@ -116,10 +116,10 @@
         <a href="#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="cart.html" class="init-bottom">買い物かごを見る</a>
+        <a href="cart.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+        <a href="request.php" class="init-bottom">お問い合わせをする</a>
       </li>
     <!-- 他グローバルナビメニュー省略 -->
     </ul>

@@ -90,7 +90,7 @@
 
 
      	if($flg==1){
-    	    echo "<a href='mypage.php' class'login-name'>ようこそ".$name."さん!</a>";
+    	    echo "<a href='mypage.php' class='login-name'>ようこそ".$name."さん!</a>";
     	    echo "<a href='mypage.php' class='login-name'>会員情報</a>";
     	    echo "<a href='mypage.php' class='login-name'>ログアウト</a>";
     	}else{
@@ -105,19 +105,19 @@
 <!-- グローバルナビゲーション -->
     <ul class="menu">
       <li class="menu__single">
-        <a href="index.html" class="init-bottom">トップページへ</a>
+        <a href="index.php" class="init-bottom">トップページへ</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
+        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
+        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+        <a href="request.php" class="init-bottom">お問い合わせをする</a>
       </li>
     </ul>
   </header>
@@ -184,7 +184,7 @@
                     fontColor : "black",
                     fontShadowColor : "white",
                     onSelect:function(data){
-                    window.location.href = "list.html" + "#panel" + data.code;
+                    window.location.href = "list.php" + "#panel" + data.code;
                     },
                 }
             );
@@ -231,8 +231,8 @@
 <!-- ランキング -->
   <h1 class="h_1">売れ筋ランキング</h1>
     <div class="multiple">
-        <div><a href="product_details.html"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
-        <div><a href="product_details.html"><img src="images/4.jpg" alt=""><p>15,980</p><p>松茸</p><p>静岡県</p></a></div>
+        <div><a href="product_details.php"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
+        <div><a href="product_details.php"><img src="images/4.jpg" alt=""><p>15,980</p><p>松茸</p><p>静岡県</p></a></div>
         <div><a href="#"><img src="images/5.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
         <div><a href="#"><img src="images/7.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
         <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>

@@ -16,7 +16,7 @@
   <body>
 
     <header>
-      <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+      <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
     </header>
 
 
@@ -25,7 +25,7 @@
 
     <h1 class="change">カード情報の変更</h1>
 
-    <form method="post" action="change_card3.html">
+    <form method="post" action="change_card3.php">
 
         <table>
         <tr>
@@ -56,7 +56,7 @@
 
     <br>
 
-    <a href="change.html">会員情報変更トップに戻る</a>
+    <a href="change.php">会員情報変更トップに戻る</a>
 
     </main>
 
