@@ -1,3 +1,10 @@
+<?php
+
+// セッション開始
+session_start();
+
+?>
+
 <!DOCTYPE html>
 
 <html>

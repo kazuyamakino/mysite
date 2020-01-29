@@ -10,16 +10,9 @@ session_start();
 // エラーメッセージ、登録完了メッセージの初期化
 $errorMessage = "";
 
+// $result初期化
+$result = "";
 
-try {
-    // 接続完了
-    $pdo = new PDO('mysql:host=localhost;dbname=haldb;charset=utf8','dbadmin','dbadmin');
-}catch (PDOException $e) {
-    $errorMessage = 'データベースエラー';
-    exit();
-    // $e->getMessage() でエラー内容を参照可能（デバッグ時のみ表示）
-    // echo $e->getMessage();
-}
 
 if (isset($_POST['signup'])) {
 
@@ -29,89 +22,62 @@ if (isset($_POST['signup'])) {
         && !empty($_POST['year']) && !empty($_POST['month']) && !empty($_POST['day'])
         && !empty($_POST['mail'])&& !empty($_POST['phone'])&& !empty($_POST['zip11'])&& !empty($_POST['addr11'])&& !empty($_POST['address'])) {
 
-            //必須項目を格納
-            $id = $_POST['id'];
             $pas = $_POST['pas'];
             $paskakunin = $_POST['paskakunin'];
-            $name = $_POST['lastname'].$_POST['firstname'];
-            $name_read = $_POST['lastkana'].$_POST['firstkana'];
-            $birthday = $_POST['year'].$_POST['month'].$_POST['day'];
-
- /*
-            * $year = $_POST['year'];
-            $month = $_POST['month'];
-            $day = $_POST['day'];
- */
-            $mail = $_POST['mail'];
-            $phone = $_POST['phone'];
-            $postal_code = $_POST['zip11'];//郵便番号
-            $street_address = $_POST['addr11'].$_POST['address'];//住所
-
-            //任意項目
-            $number = $_POST['number'];
-            $meigi = $_POST['meigi'];
-            $date = $_POST['date'];
-            $security_code = $_POST['security_code'];
-
-            //パスワードをハッシュ化
-            $pass = password_hash($pas, PASSWORD_DEFAULT);
 
             if ($pas == $paskakunin) {
 
-                //ユーザ詳細テーブル
-                $stmt1 = $pdo->prepare("INSERT INTO user_details_tbl(user_id, name, name_read, birthday, mail_address, phone_number, postal_code, street_address)
-				  VALUES (:user_id, :name, :name_read, :birthday, :mail_address, :phone_number, :postal_code, :street_address)");
-                //必須項目置き換え
-                $stmt1->bindValue(':user_id', $id);
-                $stmt1->bindValue(':name', $name);
-                $stmt1->bindValue(':name_read', $name_read);
-                $stmt1->bindValue(':birthday', $birthday);
-                $stmt1->bindValue(':mail_address', $mail);
-                $stmt1->bindValue(':phone_number', $phone);
-                $stmt1->bindValue(':postal_code', $postal_code);
-                $stmt1->bindValue(':street_address', $street_address);
+                $result = 1;
+                if($result == 1){
 
-                //ユーザテーブル
-                $stmt2 = $pdo->prepare("INSERT INTO user_tbl(user_id, password)
-				  VALUES (:user_id, :password)");
-                //必須項目置き換え
-                $stmt2->bindValue(':user_id', $id);
-                $stmt2->bindValue(':password', $pass);
+                    // セッション情報の保存
+                    $_SESSION['id'] = $_POST['id'];
+                    $_SESSION['pas'] = $_POST['pas'];
 
-                //カード情報テーブル
-                $stmt3 = $pdo->prepare("INSERT INTO credit_tbl(user_id, credit_number, nominee, expiration_date,security_code)
-				  VALUES (:user_id, :credit_number, :nominee, :expiration_date, :security_code)");
+                    $_SESSION['lastname'] = $_POST['lastname'];
+                    $_SESSION['firstname'] = $_POST['firstname'];
+                    $_SESSION['lastkana'] = $_POST['lastkana'];
+                    $_SESSION['firstkana'] = $_POST['firstkana'];
+                    $_SESSION['year'] = $_POST['year'];
+                    $_SESSION['month'] = $_POST['month'];
+                    $_SESSION['day'] = $_POST['day'];
+                    $_SESSION['mail'] = $_POST['mail'];
+                    $_SESSION['phone'] = $_POST['phone'];
+                    $_SESSION['zip11'] = $_POST['zip11'];
+                    $_SESSION['addr11'] = $_POST['addr11'];
+                    $_SESSION['address'] = $_POST['address'];
 
+                    $_SESSION['number'] = $_POST['number'];
+                    $_SESSION['meigi'] = $_POST['meigi'];
+                    $_SESSION['date'] = $_POST['date'];
+                    $_SESSION['security_code'] = $_POST['security_code'];
 
-                //クレジットカードの値が入っていたら値に置き換え
-                if (!empty($_POST['number']) && !empty($_POST['meigi']) && !empty($_POST['date']) && !empty($_POST['security_code'])) {
+                    // セッション情報の取得
+                    $id = $_SESSION['id'];
+                    $pas = $_SESSION['pas'];
 
-                        $number = $_POST['number'];
-                        $meigi = $_POST['meigi'];
-                        $date = $_POST['date'];
-                        $security_code = $_POST['security_code'];
+                    $lastname = $_SESSION['lastname'];
+                    $firstname = $_SESSION['firstname'];
+                    $lastkana = $_SESSION['lastkana'];
+                    $firstkana = $_SESSION['firstkana'];
+                    $year = $_SESSION['year'];
+                    $month = $_SESSION['month'];
+                    $day = $_SESSION['day'];
+                    $mail = $_SESSION['mail'];
+                    $phone = $_SESSION['phone'];
+                    $zip11 = $_SESSION['zip11'];
+                    $addr11 = $_SESSION['addr11'];
+                    $address = $_SESSION['address'];
 
-                        //任意事項 クレジットカード
-                        $stmt3->bindValue(':user_id', $id);
-                        $stmt3->bindValue(':credit_number', $number);
-                        $stmt3->bindValue(':nominee', $meigi);
-                        $stmt3->bindValue(':expiration_date', $date);
-                        $stmt3->bindValue(':security_code', $security_code);
-                }else{
-                    //任意項目null置き換え
-                    $stmt3->bindValue(':user_id', $id);
-                    $stmt3->bindValue(':credit_number', $number);
-                    $stmt3->bindValue(':nominee', $meigi);
-                    $stmt3->bindValue(':expiration_date', $date);
-                    $stmt3->bindValue(':security_code', $security_code);
+                    $number = $_SESSION['number'];
+                    $meigi = $_SESSION['meigi'];
+                    $date = $_SESSION['date'];
+                    $security_code = $_SESSION['security_code'];
 
+                    header ('location:registration2.php');
                 }
 
-                $stmt1->execute();
-                $stmt2->execute();
-                $stmt3->execute();
-                // $message = "登録が完了しました";
-            } else {
+           } else {
                 $errorMessage = "パスワードが一致しません";
             }
         } else {
@@ -119,24 +85,10 @@ if (isset($_POST['signup'])) {
         }
 
 } else {
-    // 必須項目初期化
-    $id = "";
+
     $pas = "";
     $paskakunin = "";
 
-    $name = "";
-    $name_read = "";
-    $birthday = "";
-    $mail = "";
-    $phone = "";
-    $postal_code = "";
-    $street_address = "";
-
-    //任意項目 クレジットカード初期化
-    $number = "";
-    $meigi = "";
-    $date = "";
-    $security_code = "";
 }
 
 
@@ -169,26 +121,30 @@ if (isset($_POST['signup'])) {
     <h1 class="registration">新規登録</h1>
 
     <form method="POST" action="">
-        <div><?php echo htmlspecialchars($errorMessage, ENT_QUOTES); ?></div>
+        <div style="color:red;"><?php echo htmlspecialchars($errorMessage, ENT_QUOTES); ?></div>
+
+        <p><span style="color:red;">&#8251;</span>のところは必須項目です</p>
+
+        <br>
 
 
       <h2>ユーザーID/パスワード</h2>
       <table>
         <tr>
-          <td class="regist">ユーザーID</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>ユーザーID</td>
           <td>
              <input type="text" name="id">
           </td>
         </tr>
 
         <tr>
-          <td class="regist">パスワード</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>パスワード</td>
           <td><input type="password" name="pas"></td>
         </tr>
 
         <tr>
           <td class="regist">
-            パスワード
+            <span style="color:red;">&#8251;</span>パスワード
             <br>
             (確認用)
           </td>
@@ -201,19 +157,19 @@ if (isset($_POST['signup'])) {
       <h2>お客様の基本情報</h2>
       <table>
         <tr>
-          <td class="regist">氏名</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>氏名</td>
           <td>姓　<input type="text" name="lastname" maxlength="10" size="10"> 名　<input type="text" name="firstname" maxlength="10" size="10"></td>
         </tr>
 
         <tr>
           <td class="regist">
-            フリガナ
+            <span style="color:red;">&#8251;</span>フリガナ
           </td>
           <td>セイ<input type="text" name="lastkana" maxlength="10" size="10"> メイ<input type="text" name="firstkana" maxlength="10" size="10"></td>
         </tr>
 
         <tr>
-          <td class="regist">生年月日</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>生年月日</td>
           <td>
             西暦 <select name="year">
               <option value="">----</option>
@@ -321,17 +277,17 @@ if (isset($_POST['signup'])) {
         </tr>
 
         <tr>
-          <td>Eメールアドレス</td>
+          <td><span style="color:red;">&#8251;</span>Eメールアドレス</td>
           <td><input type="text" name="mail"></td>
         </tr>
 
         <tr>
-          <td class="regist">電話番号</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>電話番号</td>
           <td><input type="number" name="phone"></td>
         </tr>
 
         <tr>
-          <td class="regist">住所</td>
+          <td class="regist"><span style="color:red;">&#8251;</span>住所</td>
           <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
           <td>
             〒<input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
