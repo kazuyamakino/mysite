@@ -1,3 +1,147 @@
+<?php
+
+// ハッシュ化ファイル
+require "password.php";
+
+// セッション開始
+session_start();
+
+
+// エラーメッセージ、登録完了メッセージの初期化
+$errorMessage = "";
+
+
+try {
+    // 接続完了
+    $pdo = new PDO('mysql:host=localhost;dbname=haldb;charset=utf8','dbadmin','dbadmin');
+}catch (PDOException $e) {
+    $errorMessage = 'データベースエラー';
+    exit();
+    // $e->getMessage() でエラー内容を参照可能（デバッグ時のみ表示）
+    // echo $e->getMessage();
+}
+
+if (isset($_POST['signup'])) {
+
+    // 必須項目(15個)が入力されているか
+    if (!empty($_POST['id']) && !empty($_POST['pas']) && !empty($_POST['paskakunin'])
+        && !empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['lastkana']) && !empty($_POST['firstkana'])
+        && !empty($_POST['year']) && !empty($_POST['month']) && !empty($_POST['day'])
+        && !empty($_POST['mail'])&& !empty($_POST['phone'])&& !empty($_POST['zip11'])&& !empty($_POST['addr11'])&& !empty($_POST['address'])) {
+
+            //必須項目を格納
+            $id = $_POST['id'];
+            $pas = $_POST['pas'];
+            $paskakunin = $_POST['paskakunin'];
+            $name = $_POST['lastname'].$_POST['firstname'];
+            $name_read = $_POST['lastkana'].$_POST['firstkana'];
+            $birthday = $_POST['year'].$_POST['month'].$_POST['day'];
+
+ /*
+            * $year = $_POST['year'];
+            $month = $_POST['month'];
+            $day = $_POST['day'];
+ */
+            $mail = $_POST['mail'];
+            $phone = $_POST['phone'];
+            $postal_code = $_POST['zip11'];//郵便番号
+            $street_address = $_POST['addr11'].$_POST['address'];//住所
+
+            //任意項目
+            $number = $_POST['number'];
+            $meigi = $_POST['meigi'];
+            $date = $_POST['date'];
+            $security_code = $_POST['security_code'];
+
+            //パスワードをハッシュ化
+            $pass = password_hash($pas, PASSWORD_DEFAULT);
+
+            if ($pas == $paskakunin) {
+
+                //ユーザ詳細テーブル
+                $stmt1 = $pdo->prepare("INSERT INTO user_details_tbl(user_id, name, name_read, birthday, mail_address, phone_number, postal_code, street_address)
+				  VALUES (:user_id, :name, :name_read, :birthday, :mail_address, :phone_number, :postal_code, :street_address)");
+                //必須項目置き換え
+                $stmt1->bindValue(':user_id', $id);
+                $stmt1->bindValue(':name', $name);
+                $stmt1->bindValue(':name_read', $name_read);
+                $stmt1->bindValue(':birthday', $birthday);
+                $stmt1->bindValue(':mail_address', $mail);
+                $stmt1->bindValue(':phone_number', $phone);
+                $stmt1->bindValue(':postal_code', $postal_code);
+                $stmt1->bindValue(':street_address', $street_address);
+
+                //ユーザテーブル
+                $stmt2 = $pdo->prepare("INSERT INTO user_tbl(user_id, password)
+				  VALUES (:user_id, :password)");
+                //必須項目置き換え
+                $stmt2->bindValue(':user_id', $id);
+                $stmt2->bindValue(':password', $pass);
+
+                //カード情報テーブル
+                $stmt3 = $pdo->prepare("INSERT INTO credit_tbl(user_id, credit_number, nominee, expiration_date,security_code)
+				  VALUES (:user_id, :credit_number, :nominee, :expiration_date, :security_code)");
+
+
+                //クレジットカードの値が入っていたら値に置き換え
+                if (!empty($_POST['number']) && !empty($_POST['meigi']) && !empty($_POST['date']) && !empty($_POST['security_code'])) {
+
+                        $number = $_POST['number'];
+                        $meigi = $_POST['meigi'];
+                        $date = $_POST['date'];
+                        $security_code = $_POST['security_code'];
+
+                        //任意事項 クレジットカード
+                        $stmt3->bindValue(':user_id', $id);
+                        $stmt3->bindValue(':credit_number', $number);
+                        $stmt3->bindValue(':nominee', $meigi);
+                        $stmt3->bindValue(':expiration_date', $date);
+                        $stmt3->bindValue(':security_code', $security_code);
+                }else{
+                    //任意項目null置き換え
+                    $stmt3->bindValue(':user_id', $id);
+                    $stmt3->bindValue(':credit_number', $number);
+                    $stmt3->bindValue(':nominee', $meigi);
+                    $stmt3->bindValue(':expiration_date', $date);
+                    $stmt3->bindValue(':security_code', $security_code);
+
+                }
+
+                $stmt1->execute();
+                $stmt2->execute();
+                $stmt3->execute();
+                // $message = "登録が完了しました";
+            } else {
+                $errorMessage = "パスワードが一致しません";
+            }
+        } else {
+            $errorMessage = "必須項目をすべて入力してください";
+        }
+
+} else {
+    // 必須項目初期化
+    $id = "";
+    $pas = "";
+    $paskakunin = "";
+
+    $name = "";
+    $name_read = "";
+    $birthday = "";
+    $mail = "";
+    $phone = "";
+    $postal_code = "";
+    $street_address = "";
+
+    //任意項目 クレジットカード初期化
+    $number = "";
+    $meigi = "";
+    $date = "";
+    $security_code = "";
+}
+
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -24,7 +168,9 @@
 
     <h1 class="registration">新規登録</h1>
 
-    <form method="post" action="registration2.php">
+    <form method="POST" action="">
+        <div><?php echo htmlspecialchars($errorMessage, ENT_QUOTES); ?></div>
+
 
       <h2>ユーザーID/パスワード</h2>
       <table>
@@ -218,12 +364,17 @@
           <td><input type="number" name="date"></td>
         </tr>
 
+        <tr>
+          <td class="regist">セキュリティコード</td>
+          <td><input type="number" name="security_code"></td>
+        </tr>
+
       </table>
 
       <br>
 
       <div>
-      <input type="submit" value="次へ" class="button">
+      <input type="submit" value="次へ" class="button" name ="signup">
       <input type="reset" value="クリア" class="button">
       </div>
     </form>
