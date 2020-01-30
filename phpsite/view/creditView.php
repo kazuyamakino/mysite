@@ -18,7 +18,7 @@
 <!-- ヘッダー -->
 
   <header>
-    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+    <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
 
 <!-- グローバルナビゲーション -->
 
@@ -113,7 +113,10 @@
           </td>
         </tr>
         </table>
-      <input type="button" id="disable5"  class="card" value="カード情報の追加"><br>
+       <a href="change_card2.php">
+      <input type="button" id="disable5"  class="card" value="カード情報の追加">
+      </a>
+      <br>
 <!-- ――――――――――――――――――――左側テーブル内テーブル３―――――――――――――――――――― -->
       <table class="creditcard">
         <tr>
@@ -236,7 +239,9 @@
           ファミリーマート内
           </div>
         </p>
-        <input class="addtext" type="button" value="変更">
+         <a href="change_basicinfo2.php">
+        	<input class="addtext" type="button" value="変更">
+         </a>
         <hr>
     </td>
   </tr>
@@ -291,7 +296,6 @@
   <footer>
     <div class="footer_copyright"><small>copyright &copy; 2019 K. All rights reserved.</small></div>
   </footer>
-
 
   </body>
 
