@@ -159,7 +159,7 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
 <!-- ランキング -->
   <h1 class="h_1">売れ筋ランキング</h1>
-  <a href="buyout.php" method="GET">hhhh</a>
+  <?php foreach ($product_tbl as $g) { ?>
     <div class="multiple">
         <div><a href="product_details.html"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
         <div><a href="product_details.html"><img src="images/4.jpg" alt=""><p>15,980</p><p>松茸</p><p>静岡県</p></a></div>
@@ -170,6 +170,7 @@
         <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
         <div><a href="#"><img src="images/3.jpg" alt=""><p>15,980</p><p>パイナップル</p><p>熊本県</p></a></div>
     </div>
+    <?php } ?>
   <a href="#">一覧表示</a>
 
   <hr>
