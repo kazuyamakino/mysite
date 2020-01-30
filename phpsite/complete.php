@@ -10,32 +10,32 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/request.css">
-    <meta http-equiv="refresh"content="10; url=index.html">
+    <meta http-equiv="refresh"content="10; url=index.php">
   </head>
 
   <body>
 <!-- ヘッダー -->
   <nav class="login">
-    <a href="login.html" class="login">ログイン（新規登録）</a>
+    <a href="login.php" class="login">ログイン（新規登録）</a>
   </nav>
   <header>
-    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+    <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
 <!-- グローバルナビゲーション -->
     <ul class="menu">
       <li class="menu__single">
-        <a href="index.html" class="init-bottom">トップページへ</a>
+        <a href="index.php" class="init-bottom">トップページへ</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
+        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
+        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.html" class="init-bottom">お問い合わせをする</a>
+        <a href="request.php" class="init-bottom">お問い合わせをする</a>
       </li>
     </ul>
 
@@ -68,7 +68,7 @@
 
 </main>
 
-  <a href="index.html" class="link">TOPページに戻る</a>
+  <a href="index.php" class="link">TOPページに戻る</a>
 
 
 <!-- フッター -->
@@ -82,7 +82,7 @@
 <!--
 function autoLink()
 {
-location.href="index.html";
+location.href="index.php";
 }
 setTimeout("autoLink()",5000);
 // -->
