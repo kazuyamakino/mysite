@@ -133,13 +133,13 @@ if (isset($_POST['signup'])) {
         <tr>
           <td class="regist"><span style="color:red;">&#8251;</span>ユーザーID</td>
           <td>
-             <input type="text" name="id">
+             <input type="text" name="id" maxlength="8">
           </td>
         </tr>
 
         <tr>
           <td class="regist"><span style="color:red;">&#8251;</span>パスワード</td>
-          <td><input type="password" name="pas"></td>
+          <td><input type="password" name="pas" maxlength="20"></td>
         </tr>
 
         <tr>
@@ -148,7 +148,7 @@ if (isset($_POST['signup'])) {
             <br>
             (確認用)
           </td>
-          <td><input type="password" name="paskakunin"></td>
+          <td><input type="password" name="paskakunin" maxlength="20"></td>
         </tr>
       </table>
 
@@ -165,7 +165,7 @@ if (isset($_POST['signup'])) {
           <td class="regist">
             <span style="color:red;">&#8251;</span>フリガナ
           </td>
-          <td>セイ<input type="text" name="lastkana" maxlength="10" size="10"> メイ<input type="text" name="firstkana" maxlength="10" size="10"></td>
+          <td>セイ<input type="text" name="lastkana" maxlength="40" size="10"> メイ<input type="text" name="firstkana" maxlength="40" size="10"></td>
         </tr>
 
         <tr>
@@ -278,25 +278,25 @@ if (isset($_POST['signup'])) {
 
         <tr>
           <td><span style="color:red;">&#8251;</span>Eメールアドレス</td>
-          <td><input type="text" name="mail"></td>
+          <td><input type="text" name="mail" maxlength="800"></td>
         </tr>
 
         <tr>
           <td class="regist"><span style="color:red;">&#8251;</span>電話番号</td>
-          <td><input type="number" name="phone"></td>
+          <td><input type="number" name="phone" maxlength="11"></td>
         </tr>
 
         <tr>
           <td class="regist"><span style="color:red;">&#8251;</span>住所</td>
           <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
           <td>
-            〒<input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+            〒<input type="text" name="zip11" size="10" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
             <br>
-            <input type="text" name="addr11" size="60">
+            <input type="text" name="addr11" size="60" maxlength="60">
             <br>
             丁目・番地・マンション名等
             <br>
-            <input type="text" name="address" size="50">
+            <input type="text" name="address" size="40" maxlength="40">
           </td>
         </tr>
       </table>
@@ -307,22 +307,22 @@ if (isset($_POST['signup'])) {
         <table>
         <tr>
           <td class="regist">カード番号</td>
-          <td><input type="number" name="number"></td>
+          <td><input type="number" name="number" maxlength="16"></td>
         </tr>
 
         <tr>
           <td class="regist">名義人</td>
-          <td><input type="text" name="meigi"></td>
+          <td><input type="text" name="meigi" maxlength="100"></td>
         </tr>
 
         <tr>
-          <td class="regist">有効期限</td>
-          <td><input type="number" name="date"></td>
+          <td class="regist">有効期限 月/年</td>
+          <td><input type="number" name="date" maxlength="4"></td>
         </tr>
 
         <tr>
           <td class="regist">セキュリティコード</td>
-          <td><input type="number" name="security_code"></td>
+          <td><input type="number" name="security_code" maxlength="3"></td>
         </tr>
 
       </table>
