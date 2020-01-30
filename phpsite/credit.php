@@ -42,6 +42,11 @@ foreach($_SESSION['cart'] as $code => $num) {
     $sum += $num * $goods->getPrice();
     $rows[] = $goods;
     }
+//以下の三行は、フォーム再送信の確認と表示させるエラーを消す文です
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
+
 
 // 最初の画面を表示する
 require 'view/creditView.php';
