@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -15,7 +24,7 @@
   <body>
 
     <header>
-      <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+      <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
     </header>
 
 
