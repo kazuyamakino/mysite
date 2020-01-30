@@ -42,7 +42,7 @@ foreach($_SESSION['cart'] as $code => $num) {
     $sum += $num * $goods->getPrice();
     $rows[] = $goods;
     }
-//以下の三行は、フォーム再送信の確認と表示させるエラーを消す文です
+//以下の三行は、フォーム再送信の確認を表示させるエラーを消す文です
 header('Expires: -1');
 header('Cache-Control:');
 header('Pragma:');
