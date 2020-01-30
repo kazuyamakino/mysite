@@ -151,7 +151,7 @@ if (isset($_POST['signup_last'])) {
         <tr>
           <td class="regist">パスワード</td>
           <td>
-          <?php echo $pas; ?>
+          <?php echo str_repeat("*",mb_strlen($pas,"UTF8")) ; ?>
           </td>
         </tr>
 
