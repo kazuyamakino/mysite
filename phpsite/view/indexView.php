@@ -18,7 +18,7 @@
 
 
      	if($flg==1){
-    	    echo "<a href='mypage.php' class='login-name'>ようこそ".$id."さん!</a>";
+          echo "<a href='mypage.php' class='login-name'>ようこそ".$id."さん!</a>";
     	    echo "<a href='mypage.php' class='login-name'>会員情報</a>";
     	    echo "<a href='index.php' class='login-name'>ログアウト</a>";
     	}else{

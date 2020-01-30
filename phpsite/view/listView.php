@@ -51,7 +51,7 @@
         <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="cart.php" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
         <a href="request.php" class="init-bottom">お問い合わせをする</a>
