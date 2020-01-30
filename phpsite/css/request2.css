@@ -118,3 +118,7 @@ td.other{
 .button{
   padding: 5px 0;
 }
+
+td img{
+  width:100px;
+}
