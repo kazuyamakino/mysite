@@ -1,0 +1,43 @@
+//ユーザテーブル
+CREATE TABLE user_tbl
+(
+    user_id                     VARCHAR(8) NOT NULL comment'ユーザID',
+    password                    VARCHAR(20) NOT NULL comment'パスワード'
+)
+comment='ユーザテーブル';
+
+ALTER TABLE user_tbl
+	ADD PRIMARY KEY (user_id);
+
+
+//ユーザ詳細テーブル
+CREATE TABLE user_details_tbl
+(
+    user_id                     VARCHAR(8) NOT NULL comment'ユーザID',
+    name                        VARCHAR(50) NOT NULL comment'名前',
+    name_read                   VARCHAR(80) NOT NULL comment'名前(カナ)',
+    birthday                    VARCHAR(50) NOT NULL comment'生年月日',
+    mail_address                VARCHAR(800) NOT NULL comment'メールアドレス',
+    phone_number                INT NOT NULL comment'電話番号',
+    postal_code                 INT NOT NULL comment'郵便番号'
+    street_address              VARCHAR(100) NOT NULL comment'住所'
+)
+comment='ユーザ詳細テーブル';
+
+ALTER TABLE user_tbl
+	ADD PRIMARY KEY (user_id);
+
+
+//カード情報テーブル
+CREATE TABLE credit_tbl
+(
+    user_id                     VARCHAR(8) NOT NULL comment'ユーザID',
+    credit_number               VARCHAR(16) comment'カード番号',
+    nominee                     VARCHAR(100) comment'名義人',
+    expiration_date             VARCHAR(8) comment'有効期限',
+    security_code               VARCHAR(3)comment'セキュリティコード'
+)
+comment='カード情報テーブル';
+
+ALTER TABLE user_tbl
+	ADD PRIMARY KEY (user_id);
