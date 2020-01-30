@@ -66,120 +66,55 @@ a.link{
   margin: 20px 0 40px 0;
 }
 
-table.request{
-  width: 90%;
-  border-collapse: collapse;
-  margin: 0 auto;
-  border: 1px #aaa solid;
-  padding: 10px;
-}
-
 table.confirmation{
-  width: 90%;
+	width:600px;
   border-collapse: collapse;
   margin: 0 auto;
+  border: 1px #aaa solid;
   padding: 10px;
 }
 
-table.request tr,
-table.request td{
+table.confirmation tr,
+table.confirmation td.left,
+table.confirmation td.left2{
   border: 1px #aaa solid;
 }
 
-.left{
-  width: 18%;
+td.left{
+  width: 23%;
   vertical-align: middle;
 }
 
-.center{
-  width: 13%;
+td.left2{
+  width: 9em;
   vertical-align: middle;
 }
 
-.right{
+td.center{
+  width: 3.5rem;
+  vertical-align: middle;
+}
+
+td.right{
+  width: 10rem;
   padding: 0.5% 0;
   text-align: left;
   vertical-align: middle;
 }
 
-.name{
-  padding-left: 8.8%;
+td.connect{
+  padding: 0.5% 30px;
+  text-align: left;
+  vertical-align: middle;
 }
 
-.name input{
-  margin-right: 2em;
+td.other{
+  padding: 0.5% 30px;
+  text-align: left;
+  vertical-align: middle;
 }
 
-.mail{
-  padding-left: 10px;
-}
-
-.mail input{
-  width: 250px;
-}
-
-textarea.request{
-  width: 80%;
-  height: 5em;
-  margin-left: 10px;
-}
 
 .button{
   padding: 5px 0;
 }
-
-.button2{
-  width: 100px;
-  padding: 5px 0;
-  display: flex;
-  margin:0 auto;
-}
-
-.button2 input{
-  margin: 0 auto;
-}
-
-.toi{
-  height: 5em;
-}
-
-input.kakunin{
-
-}
-
-input.reset{
-
-}
-
-div#tabs{
-  margin-top: 10px;
-}
-
-.tab {
-  border-bottom: 3px solid #fb4343;
-}
-.tab li {
-  color: #333;
-  float: left;
-  margin: 0 10px -1px 0;
-  padding: 10px 20px;
-  border: 1px solid #fb4343;
-  cursor: pointer;
-  list-style: none;
-  transition: .3s;
-}
-.tab li.active {
-  color: #fff;
-  background: #fb4343;
-  cursor: auto;
-}
-
-.area ul {
-  display: none;
-}
-.area ul.show {
-  display: block;
-}
-
-
-
