@@ -75,7 +75,6 @@ $flg=0;
                 session_regenerate_id(true); // セッションIDをふりなおす
                 $_SESSION['roginid'] = $id; // ユーザーIDをセッション変数にセット
                 $_SESSION['password'] = $password;
-                echo 'ログインしました！';
               }
           }
 
@@ -95,6 +94,9 @@ $flg=0;
 
 
       }
+
+
+
 
 
 
