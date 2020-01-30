@@ -10,18 +10,20 @@
     $other = htmlspecialchars($_POST["other"]);
     $rename ="";
 
-    if(isset($_FILES)&& isset($_FILES['image']) && is_uploaded_file($_FILES['image']['tmp_name'])){
-        if(!file_exists('upload')){
-            mkdir('upload');
+    if (pathinfo($image,PATHINFO_EXTENSION) == 'jpg' || pathinfo($image,PATHINFO_EXTENSION) == 'png' || pathinfo($image,PATHINFO_EXTENSION) == 'jpeg' || pathinfo($image,PATHINFO_EXTENSION) == 'gih'){
+        if(isset($_FILES)&& isset($_FILES['image']) && is_uploaded_file($_FILES['image']['tmp_name'])){
+            if(!file_exists('upload')){
+                mkdir('upload');
+            }
+            $a = 'upload/' . basename($_FILES['image']['name']);
+            if(move_uploaded_file($_FILES['image']['tmp_name'], $a)){
+                $msg = $a. 'のアップロードに成功しました';
+            }else {
+                $msg = 'アップロードに失敗しました';
+            }
+            $rename = $product.date('ymdHis').'.png';
+            rename ('upload/'.$image,'upload/'.$rename);
         }
-        $a = 'upload/' . basename($_FILES['image']['name']);
-        if(move_uploaded_file($_FILES['image']['tmp_name'], $a)){
-            $msg = $a. 'のアップロードに成功しました';
-        }else {
-            $msg = 'アップロードに失敗しました';
-        }
-        $rename = $product.date('ymdHis').'.png';
-        rename ('upload/'.$image,'upload/'.$rename);
     }
 ?>
 
@@ -43,27 +45,27 @@
   <body>
 <!-- ヘッダー -->
   <nav class="login">
-    <a href="login.php" class="login">ログイン（新規登録）</a>
+    <a href="login.html" class="login">ログイン（新規登録）</a>
   </nav>
   <header>
-    <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+    <h1><a href="index.html"><img src="images/rogo.jpg" alt="ろご"></a></h1>
 <!-- グローバルナビゲーション -->
     <nav>
     <ul class="menu">
       <li class="menu__single">
-        <a href="index.php" class="init-bottom">トップページへ</a>
+        <a href="index.html" class="init-bottom">トップページへ</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
+        <a href="mypage.html#tobe" class="init-bottom">お気に入り</a>
       </li>
       <li class="menu__single">
-        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
+        <a href="mypage.html#tobe2" class="init-bottom">購入履歴</a>
       </li>
       <li class="menu__single">
-        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
+        <a href="buy.html" class="init-bottom">買い物かごを見る</a>
       </li>
       <li class="menu__single">
-        <a href="request.php" class="init-bottom">お問い合わせをする</a>
+        <a href="request.html" class="init-bottom">お問い合わせをする</a>
       </li>
     </ul>
     </nav>
