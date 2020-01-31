@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/common85033.css">
+    <link rel="stylesheet" href="css/buy.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   </head>
