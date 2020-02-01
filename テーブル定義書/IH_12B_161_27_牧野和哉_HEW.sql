@@ -34,6 +34,20 @@ alter table order_tbl
 	add primary key(order_id);
 	
 ----------------------------------------------
+create table orderdetails_tbl(
+  order_id SERIAL NOT NULL COMMENT '注文商品ID',
+  user_id  VARCHAR(8) NOT NULL comment'ユーザID',
+  product_id VARCHAR(20) NOT NULL COMMENT '商品ID',
+  quantity INT(20) NOT NULL COMMENT '個数',
+  order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '注文日',
+)
+comment='購入詳細テーブル';
+
+
+alter table orderdetails_tbl
+	add primary key(order_id);
+	
+----------------------------------------------
 INSERT INTO product_tbl(
   product_id,
   product_name,
