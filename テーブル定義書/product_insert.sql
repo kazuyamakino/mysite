@@ -1,3 +1,22 @@
+CREATE TABLE product_tbl
+(
+    product_id                  INT(8) AUTO_INCREMENT NOT NULL comment'商品ID',
+    product_name                VARCHAR(60) NOT NULL comment'商品名',
+    producing_area              VARCHAR(60) NOT NULL comment'都道府県',
+    images                      VARCHAR(60) NOT NULL comment'画像URL',
+    region                      VARCHAR(60) NOT NULL comment'地方',
+    categoly                    VARCHAR(60) NOT NULL comment'カテゴリー',
+    description                 VARCHAR(60) NOT NULL comment'商品説明',
+    price                       INT NOT NULL comment'値段',
+    additional_date             DATETIME NOT NULL comment'登録日時'
+)
+comment='商品テーブル';
+	
+alter table product_tbl
+	add primary key(product_id);
+
+---------------------------------------------------------------------
+
 insert into product_tbl (product_id,product_name,producing_area,images,region,categoly,description,price,additional_date)
 	values(1,"夕張メロン","北海道","1.1.jpg",1,5,"北海道産の夕張メロンです",2580,NOW()),
 		  (2,"花咲ガニ","北海道","1.2.jpg",1,1,"北海道産の花咲ガニです",1250,NOW()),
