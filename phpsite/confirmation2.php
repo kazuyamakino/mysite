@@ -31,31 +31,27 @@ $mail = htmlspecialchars($_POST["mail"]);
   </head>
 
   <body>
-<!-- ヘッダー -->
-  <nav class="login">
-    <a href="login.php" class="login">ログイン（新規登録）</a>
-  </nav>
   <header>
-    <h1><a href="index.php"><img src="images/rogo.jpg" alt="ろご"></a></h1>
+    <h1><a href="index.php"><img src="images/logo.png" alt="ろご"></a></h1>
 <!-- グローバルナビゲーション -->
     <nav>
-    <ul class="menu">
-      <li class="menu__single">
-        <a href="index.php" class="init-bottom">トップページへ</a>
-      </li>
-      <li class="menu__single">
-        <a href="mypage.php#tobe" class="init-bottom">お気に入り</a>
-      </li>
-      <li class="menu__single">
-        <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
-      </li>
-      <li class="menu__single">
-        <a href="buy.php" class="init-bottom">買い物かごを見る</a>
-      </li>
-      <li class="menu__single">
-        <a href="request.php" class="init-bottom">お問い合わせをする</a>
-      </li>
-    </ul>
+      <ul class="menu">
+        <li class="menu__single">
+          <a href="index.php" class="init-bottom">トップページへ</a>
+        </li>
+        <li class="menu__single">
+          <a href="mypage.php#tobe2" class="init-bottom">購入履歴</a>
+        </li>
+        <li class="menu__single">
+          <a href="mypage.php#tobe1" class="init-bottom">会員情報変更</a>
+        </li>
+        <li class="menu__single">
+          <a href="buy.php" class="init-bottom">買い物かごを見る</a>
+        </li>
+        <li class="menu__single">
+          <a href="request.php" class="init-bottom">お問い合わせをする</a>
+        </li>
+      </ul>
     </nav>
 
   </header>
@@ -103,7 +99,7 @@ $mail = htmlspecialchars($_POST["mail"]);
       <tr>
         <td colspan="3" class="button">
           <input type="submit" name="" value="送信" class="sousin">
-          <input type="submit" name="" value="再入力" class="reverse">
+          <button type="button" onclick="history.back()">再入力</button>
         </td>
       </tr>
     </table>
