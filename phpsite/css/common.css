@@ -10,6 +10,15 @@ body{
   text-align: center;
   margin: 0 auto;
   width: 90%;
+  background-image: url(../images/background_img.png);
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center; 
+
+
 }
 
 img{
@@ -21,6 +30,7 @@ a:visited{color: #b16a23;}
 a:hover{}
 a:active{color: #b16a23;}
 
+/* ログイン（新規登録） */
 nav.login{
   margin: 15px 0 20px 0;
 }
@@ -30,7 +40,7 @@ a.login{
   margin-left: 800px;
 }
 
-
+/* ナビ */
 .menu {
     position: relative;
     width: 100%;
