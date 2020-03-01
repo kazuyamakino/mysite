@@ -1,0 +1,34 @@
+CREATE TABLE `request_tbl` (
+	`request_no` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'リクエストNo',
+	`product_name` VARCHAR(60) NOT NULL COMMENT '商品名' COLLATE 'utf8_unicode_ci',
+	`producer` VARCHAR(60) NOT NULL COMMENT '生産者' COLLATE 'utf8_unicode_ci',
+	`images` VARCHAR(60) NULL DEFAULT NULL COMMENT '画像URL' COLLATE 'utf8_unicode_ci',
+	`name` VARCHAR(50) NOT NULL COMMENT '名前' COLLATE 'utf8_unicode_ci',
+	`name_read` VARCHAR(80) NOT NULL COMMENT '名前（カナ）' COLLATE 'utf8_unicode_ci',
+	`mail_address` VARCHAR(50) NOT NULL COMMENT 'メールアドレス' COLLATE 'utf8_unicode_ci',
+	`other` VARCHAR(800) NULL DEFAULT NULL COMMENT 'その他' COLLATE 'utf8_unicode_ci',
+	PRIMARY KEY (`request_no`),
+	UNIQUE INDEX `request_no` (`request_no`)
+)
+COMMENT='リクエストテーブル'
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=15
+;
+
+---------------------------------------------------
+CREATE TABLE `inquiry_tbl` (
+	`inquiry_no` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'お問い合わせNo',
+	`name` VARCHAR(50) NOT NULL COMMENT '名前' COLLATE 'utf8_unicode_ci',
+	`name_read` VARCHAR(80) NOT NULL COMMENT '名前（カナ）' COLLATE 'utf8_unicode_ci',
+	`mail_address` VARCHAR(50) NOT NULL COMMENT 'メールアドレス' COLLATE 'utf8_unicode_ci',
+	`content` VARCHAR(800) NULL DEFAULT NULL COMMENT 'お問い合わせ内容' COLLATE 'utf8_unicode_ci',
+	PRIMARY KEY (`inquiry_no`),
+	UNIQUE INDEX `inquiry_no` (`inquiry_no`)
+)
+COMMENT='お問い合わせテーブル'
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3
+;
+
